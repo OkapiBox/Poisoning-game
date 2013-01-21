@@ -2,6 +2,7 @@ package net.okapibox.people;
 
 import java.util.Random;
 
+import net.okapibox.main.Thingy;
 import net.okapibox.updates.Updates;
 
 public class Generation {
@@ -48,7 +49,11 @@ public class Generation {
 			System.out.println("DEV: MADE RANDOMS");
 		}
 		if(100 - smartfin > immunefin && immunefin >= 0 && immunefin <= 100){//if it's in the correct parameters for being solvable,
-			System.out.println("Your Target: Name: " + namefin + ", Immunity Level: " + immunefin + "%" + ", Intelligence: " + smartfin + "th Percentile");//then print out the person's stats
+			Thingy.getEnd(smartfin);
+			if(Updates.dev){
+				System.out.println("DEV: GOT ENDING");
+			}
+			System.out.println("Your Target: Name: " + namefin + ", Immunity Level: " + immunefin + "%" + ", Intelligence: " + smartfin + Thingy.end + " Percentile");//then print out the person's stats
 			if(Updates.dev){
 				System.out.println("DEV: PRINTED PERSON");
 			}
